@@ -43,7 +43,7 @@ dependencies {
 
 def siteUrl = 'https://github.com/misty-rain/cat-scan'      // 项目的主页
 def gitUrl = 'https://github.com/misty-rain/cat-scan.git'   // Git仓库的url
-group = "org.rocko.bpb"
+group = "com.mistyrain.cat"
 
 install {
     repositories.mavenInstaller {
