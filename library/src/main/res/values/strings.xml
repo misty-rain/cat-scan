@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">catscan</string>
+    <string name="btn_picture">图片</string>
+    <string name="btn_light">闪光</string>
+    <string name="btn_ok">Ok</string>
+    <string name="qrcode">二维码</string>
+    <string name="barcode">条形码</string>
+    <string name="tips_open_camera_error">Failed to open camera, please ensure the permission is allowed and try again</string>
+    <string name="tips_decode_null">No data resolved</string>
+    <string name="scannresult_title">扫描结果</string>
+</resources>

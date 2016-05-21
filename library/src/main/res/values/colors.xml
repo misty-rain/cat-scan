@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="alpha_80_black">#CC000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="sr_color_primary">#C35354</color>
+    <color name="sr_color_primary_dark">#C35354</color>
+    <color name="sr_window_background">#FFFEFEFE</color>
+</resources>
