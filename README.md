@@ -16,11 +16,11 @@ compile 'com.mistyrain.cat:library:1.0.0'
 * Download the latest JAR or grab via Maven:
 ```groovy
 <dependency>
-<groupId>com.mistyrain.cat</groupId>
-<artifactId>library</artifactId>
-<version>1.0.0</version>
-<type>pom</type>
- </dependency>
+  <groupId>com.mistyrain.cat</groupId>
+  <artifactId>library</artifactId>
+  <version>1.0.0</version>
+  <type>pom</type>
+</dependency>
 ```
 
 # Download Demo
@@ -85,7 +85,7 @@ limitations under the License.
 [7]: https://github.com/yanzhenjie/NoHttp/issues
 [8]: https://github.com/yanzhenjie/NoHttp/blob/master/Jar/nohttp1.0.4.jar?raw=true
 [9]:
-[10]:http://misty-rain.github.io/images/scan.png
+[10]: http://misty-rain.github.io/images/scan.png
 [11]: https://github.com/yanzhenjie/NoHttp/blob/master/Jar/nohttp1.0.4-include-source.jar?raw=true
 [12]: http://www.yanzhenjie.com
 [13]: https://codeload.github.com/yanzhenjie/NoHttp/zip/1.0.4
