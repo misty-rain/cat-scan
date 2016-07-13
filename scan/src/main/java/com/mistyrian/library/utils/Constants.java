@@ -28,5 +28,6 @@ public class Constants {
     public static final int ID_DECODE_FAILED = ID_START + 30;
     public static final int ID_DECODE_SUCCESS = ID_START + 40;
     public static final int ID_QUIT = ID_START + 50;
+    public static final int SCAN_SUCCESS = 1;
 
 }

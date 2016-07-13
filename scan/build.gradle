@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-version = "1.0.0"
+version = "1.0.1"
 
 android {
     compileSdkVersion 23
@@ -13,7 +13,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.1"
     }
     buildTypes {
         release {
@@ -30,6 +30,8 @@ android {
 
     lintOptions {
         disable 'InvalidPackage'
+        abortOnError false
+
     }
 }
 
@@ -64,7 +66,7 @@ install {
                 developers {
                     developer {
                         id 'mistyrain'		//填写的一些基本信息
-                        name 'cat'
+                        name 'Chibi Maruko Chan'
                         email 'taowu78@gmail.com'
                     }
                 }
@@ -85,6 +87,7 @@ task sourcesJar(type: Jar) {
 task javadoc(type: Javadoc) {
     source = android.sourceSets.main.java.srcDirs
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    failOnError false
 }
 task javadocJar(type: Jar, dependsOn: javadoc) {
     classifier = 'javadoc'

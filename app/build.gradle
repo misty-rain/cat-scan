@@ -11,6 +11,13 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        abortOnError false
+
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -23,5 +30,5 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
-    compile project(':library')
+    compile project(':scan')
 }

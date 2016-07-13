@@ -11,14 +11,14 @@
 
 * AndroidStudio using Gradle build add dependent (recommended)
 ```groovy
-compile 'com.mistyrain.cat:library:1.0.0'
+compile 'com.mistyrain.cat:scan:1.0.1'
 ```
 * Download the latest JAR or grab via Maven:
 ```groovy
 <dependency>
   <groupId>com.mistyrain.cat</groupId>
-  <artifactId>library</artifactId>
-  <version>1.0.0</version>
+  <artifactId>scan</artifactId>
+  <version>1.0.1</version>
   <type>pom</type>
 </dependency>
 ```
@@ -47,14 +47,24 @@ compile 'com.mistyrain.cat:library:1.0.0'
 
 # 1. Start CaptureActivity
 ```java
-Intent intent = new Intent(this,CaptureActivity.class);
-startActivity(intent);
+ 
+        Intent intent = new Intent(MainActivity.this,CaptureActivity.class);
+        startActivityForResult(intent, Constants.SCAN_SUCCESS);
 
 ```
 
 # 2. Result callback
 ```java
-implements ResultActivity.Callback
+       @Override
+         protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode != 0) {
+            if (resultCode == Constants.SCAN_SUCCESS) {
+                String resultStr = data.getStringExtra("resultStr");
+                Toast.makeText(MainActivity.this,resultStr,Toast.LENGTH_SHORT).show();
+            }
+        }
+
+    }
 ......
 ```
 

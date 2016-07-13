@@ -45,6 +45,7 @@ import com.mistyrian.library.camera.CameraManager;
 import com.mistyrian.library.decode.DecodeUtils;
 import com.mistyrian.library.utils.BeepManager;
 import com.mistyrian.library.utils.CommonUtils;
+import com.mistyrian.library.utils.Constants;
 import com.mistyrian.library.utils.InactivityTimer;
 
 import java.io.IOException;
@@ -359,7 +360,7 @@ public class CaptureActivity extends AppCompatActivity implements SurfaceHolder.
         mInactivityTimer.onActivity();
         mBeepManager.playBeepSoundAndVibrate();
 
-        if (!CommonUtils.isEmpty(result) && CommonUtils.isUrl(result)) {
+      /*  if (!CommonUtils.isEmpty(result) && CommonUtils.isUrl(result)) {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse(result));
             startActivity(intent);
@@ -370,8 +371,12 @@ public class CaptureActivity extends AppCompatActivity implements SurfaceHolder.
                 intent.putExtras(bundle);
             }
             startActivity(intent);
-           // readyGo(ResultActivity.class, bundle);
-        }
+
+        }*/
+        Intent intent = new Intent();
+        intent.putExtra("resultStr",result);
+        setResult(Constants.SCAN_SUCCESS,intent);
+        finish();
     }
 
     private void onCameraPreviewSuccess() {
